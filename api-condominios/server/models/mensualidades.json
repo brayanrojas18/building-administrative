@@ -1,0 +1,34 @@
+{
+  "name": "mensualidades",
+  "plural": "mensualidades",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true,
+    "Company": true
+  },
+  "properties": {
+    "amount": {
+      "type": "number"
+    },
+    "year": {
+      "type": "number"
+    },
+    "month": {
+      "type": "number"
+    },
+    "condominium": {
+      "type": "string"
+    },
+    "byUser": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

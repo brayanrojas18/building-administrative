@@ -1,0 +1,33 @@
+{
+  "name": "pagos-generados",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true,
+    "Company": true
+  },
+  "properties": {
+    "year": {
+      "type": "number"
+    },
+    "month": {
+      "type": "number"
+    },
+    "condominium": {
+      "type": "string"
+    },
+    "byUser": {
+      "type": "string"
+    },
+    "pago_id": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

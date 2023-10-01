@@ -1,0 +1,29 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongoDb": {
+    "port": 27017,
+    "url": "mongodb+srv://brayan_rojas:123@building-administrativo.bllkt.mongodb.net/building_administrativo",
+    "database": "building-administrativo",
+    "password": "123",
+    "name": "mongoDb",
+    "user": "brayan_rojas",
+    "connector": "mongodb"
+  },
+  "MyEmail": {
+    "name": "MyEmail",
+    "connector": "mail",
+    "transports": [{
+      "type": "SMTP",
+      "host": "smtp.gmail.com",
+      "secure": true,
+      "port": 465,
+      "auth": {
+        "user": "name@gmail.com",
+        "pass": "pass"
+      }
+    }]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "condominios",
+  "plural": "condominios",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true,
+    "Company": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "admin": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "condominium": {
+      "type": "string"
+    },
+    "byUser": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "usuarios": {
+      "type": "belongsTo",
+      "model": "usuarios",
+      "foreignKey": "condominium",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

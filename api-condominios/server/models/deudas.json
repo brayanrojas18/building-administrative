@@ -1,0 +1,57 @@
+{
+  "name": "deudas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true,
+    "Company": true
+  },
+  "properties": {
+    "amount": {
+      "type": "number"
+    },
+    "year": {
+      "type": "number"
+    },
+    "month": {
+      "type": "number"
+    },
+    "usuario": {
+      "type": "string"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "cedula": {
+      "type": "number"
+    },
+    "numero_casa": {
+      "type": "string"
+    },
+    "pagada": {
+      "type": "boolean"
+    },
+    "mensualidad_config": {
+      "type": "number"
+    },
+    "condominium": {
+      "type": "string"
+    },
+    "byUser": {
+      "type": "string"
+    },
+    "pago_id": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

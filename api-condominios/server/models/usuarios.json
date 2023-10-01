@@ -1,0 +1,63 @@
+{
+  "name": "usuarios",
+  "plural": "usuarios",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Timestamp": true,
+    "Company": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "identity_card": {
+      "type": "number"
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "house_code": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "condominium": {
+      "type": "string"
+    },
+    "byUser": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "condominios": {
+      "type": "belongsTo",
+      "model": "condominios",
+      "foreignKey": "condominium"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}
